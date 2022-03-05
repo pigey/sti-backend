@@ -21,7 +21,12 @@ app.get("/register", (req, res) => {
     let time = req.query.time
     console.log(user)
     console.log(time)
-    users[user] = time
+    let oldtime = users[user]
+    if(time > oldtime){
+        users[user] = time
+    }
+    
+
     res.status(200).send({"status":"success"})
 })
 
