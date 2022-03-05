@@ -24,6 +24,7 @@ app.get("/register", (req, res) => {
     let oldtime = users[user]
     if(oldtime == null || time > oldtime){
         users[user] = time
+        oldtime = 0;
         
     }
     
