@@ -22,12 +22,12 @@ app.get("/register", (req, res) => {
     console.log(user)
     console.log(time)
     let oldtime = users[user]
-    if(oldtime == null || time > oldtime){
+    if(oldtime == null || time.number() > oldtime.number()){
         users[user] = time
-        oldtime = 0;
+        
         
     }
-    //reee
+    
 
     res.status(200).send({"status":"success"})
 })
