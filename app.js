@@ -26,7 +26,7 @@ app.get("/register", (req, res) => {
         users[user] = time
         
     }
-    //this time it will work!
+    //it did not work
 
     res.status(200).send({"status":"success"})
 })
