@@ -26,7 +26,7 @@ app.get("/register", (req, res) => {
         users[user] = time
         
     }
-    //reset code comment 2
+    
 
     res.status(200).send({"status":"success"})
 })
