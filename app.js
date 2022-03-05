@@ -21,8 +21,10 @@ app.get("/register", (req, res) => {
     let time = req.query.time
     console.log(user)
     console.log(time)
-    let oldtime = users[user].number()
-    if(oldtime == null || time > oldtime){
+    let oldtime = users[user]
+    var oldtimeNum = parseInt(oldtime);
+    var timeNum = parseInt(time);
+    if(oldtime == null || timeNum > oldtimeNum){
         users[user] = time
         
         
