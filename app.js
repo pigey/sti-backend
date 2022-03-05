@@ -26,7 +26,7 @@ app.get("/register", (req, res) => {
         users[user] = time
         
     }
-    
+    //back end reset
 
     res.status(200).send({"status":"success"})
 })
