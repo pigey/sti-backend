@@ -18,11 +18,11 @@ app.get("/",(req ,res)=>{
 
 app.get("/register", (req, res) => {
     let user = req.query.user
-    let time = req.query.time
+    let time = req.query.time.number()
     console.log(user)
     console.log(time)
-    let oldtime = users[user]
-    if(oldtime == null || time.number() > oldtime.number()){
+    let oldtime = users[user].number()
+    if(oldtime == null || time > oldtime){
         users[user] = time
         
         
