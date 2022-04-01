@@ -33,7 +33,7 @@ app.get("/register", (req, res) => {
 
     res.status(200).send({"status":"success"})
 })
-
+//comment
 app.get("/highscores", (req, res) => {
     res.status(200).send(users)
 })
